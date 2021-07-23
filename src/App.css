@@ -1,38 +1,185 @@
-.App {
+/* RESETS */
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+li{
+  list-style: none;
+}
+
+/* PROPERTY PRESETS */
+:root {
+  --primaryColor: #E5E5E5;
+  --totalRooms: #63F0F0;
+  --totalIn: #F0C03E;
+  --arrivals: #3EEB83;
+  --departures: #F98484;
+  --clean: #FFFFFF;
+  --dirty: grey;
+  --Out:#A30812;
+
+}
+
+.mgnSmall{
+  margin-top: 10px;
+}
+
+.container{
+  background-color: var(--primaryColor);
+  overflow: hidden;
+}
+
+
+.header-wrapper{
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  width: 70vw;
+  left: 25vw;
+}
+
+.overviewLabel h1{
+  font-size: 3rem;
+}
+
+
+
+.navContainer{
+  position: absolute;
+  border-radius: 20px;
+  background: #FFFFFF;
+  box-shadow: 7px 4px 10px rgba(0, 0, 0, 0.15);
+  width: 15vw;
+  height: 70vh;
+  top:15vh;
+  left: 2vw;
+}
+
+/* .navItem{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+} */
+
+.userLabel{
+  top: 3vh;
+  width: 30vw;
+  height: 5vh;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .userImage{
+  width: 50px;
+  height: 50px;
+  border: var(--Out) solid 1px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.userImage img{
+  width: 5vw;
+} */
+
+.main-wrapper{
+  position: absolute;
+  width: 75vw;
+  height: 75vh;
+  bottom: 5vh;
+  left: 20vw;
+  display: grid;
+  grid-template-rows: 15% 85%;
+  grid-template-columns: 50% 50%;
+  grid-gap: 50px;
+}
+
+.overviewSummaryContainer{
+  grid-column: 1/ span 2;
+  grid-row: 1/ span 1;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.elipse-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.elipse-container .elipse{
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.elipse-container .elipse h4{
+  font-size: 30px;
+}
+
+.elipse-container .itemLabel{
+  font-size: 15px;
+  width: 100%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* ELIPSE COLORING */
+
+.elipseTotal{
+  background-color: var(--totalRooms);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.elipseIn{
+  background-color:var(--totalIn);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.elipseArr{
+  background-color: var(--arrivals);
+}
+
+.elipseDep{
+  background-color: var(--departures);
+}
+
+.elipseClean{
+  background-color: var(--clean);
+}
+
+.elipseDirty{
+  background-color: var(--dirty);
+}
+
+.elipseOut{
+  background-color: var(--Out);
+}
+
+
+/* LEFT NAVIGATION */
+
+.navContainer{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
