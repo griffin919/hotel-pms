@@ -1,7 +1,9 @@
+import React from 'react'
+
 const BackOffice = () => {
     return (
         <div>
-            <h1>BackOffice</h1>
+            <h1>Back Office</h1>
         </div>
     )
 }

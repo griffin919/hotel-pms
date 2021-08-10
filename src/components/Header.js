@@ -1,25 +1,15 @@
 import HeaderTitle from "./HeaderTitle"
-import * as BiIcons from 'react-icons/bi';
+import React from 'react'
 
-const Header = ({user}) => {
+const Header = () => {
     return (
         <header className='header-wrapper'>
             
-            <HeaderTitle title={'OVERVIEW'}/>
-
-            <div className="userLabel">
-                <div><p>Hello, <span class="userLogged">{user}</span></p> </div>
-{/*             
-                <div className="userIcon">
-                  <BiIcons.BiUserCircle/>
-                </div> */}
-            </div>
+            <HeaderTitle title={''}/>
+            
+            
         </header>
     )
 }
 
 export default Header
-
-Header.defaultProps = {
-    user: 'user',
-}
