@@ -1,15 +1,36 @@
 import HeaderTitle from "./HeaderTitle"
 import React from 'react'
+import '../components/header.css';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Overview from './pages/Overview';
+import BackOffice from './pages/BackOffice';
+import GuestMgt from './pages/Guests/GuestMgt';
+import POS from './pages/POS';
+import Revenue from './pages/Revenue';
+import RoomMgt from './pages/RoomMgt';
+import FrontOffice from './pages/FrontOffice/FrontOffice';
+import NavDrawer from './NavDrawer'
 
 const Header = () => {
     return (
         <header className='header-wrapper'>
-            
-            <HeaderTitle title={''}/>
-            
+            <NavDrawer/>
+            <Switch>
+              <Route exact path='/' render={props=> <Overview {...props}/>}/>
+              <Route exact path='/GuestMgt' render={props=> <GuestMgt {...props}/>}/>
+              <Route exact path='/BackOffice'  render={props=> <BackOffice {...props}/>}/>
+              <Route exact path='/POS'  render={props=> <POS {...props}/>}/>
+              <Route exact path='/Revenue'  render={props=> <Revenue {...props}/>}/>
+              <Route exact path='/RoomMgt'  render={props=> <RoomMgt {...props}/>}/>
+              <Route exact path='/FrontOffice'  render={props=> <FrontOffice {...props}/>}/>
+            </Switch>
+
+            <h3>hello, user</h3>
             
         </header>
     )
 }
 
 export default Header
+
+
