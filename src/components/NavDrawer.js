@@ -4,8 +4,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import { AppBar, IconButton, Toolbar, Typography} from '@material-ui/core';
 //import Button from '@material-ui/core/Button';
-import SortIcon from '@material-ui/icons/Sort';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+// import SortIcon from '@material-ui/icons/Sort';
+// import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
@@ -55,7 +55,7 @@ const TemporaryDrawer = (props) => {
     {
       text: 'Overview',
       icon: <LineStyleRoundedIcon />,
-      onClick: ()=> history.push('/')
+      onClick: ()=> history.push('/Overview')
     },
     {
       text: 'Front Office',

@@ -2,8 +2,19 @@
 import React from 'react'
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Overview from './components/pages/Overview/Overview';
 import Header from './components/Header'
+
+//Page imports
+// ---------------------
+import Overview from './components/pages/Overview/Overview';
+import BackOffice from './components/pages/BackOffice/BackOffice';
+import GuestMgt from './components/pages/Guests/GuestMgt';
+import POS from './components/pages/POS/POS';
+import Revenue from './components/pages/Revenue/Revenue';
+import RoomMgt from './components/pages/RoomMgt/RoomMgt';
+import FrontOffice from './components/pages/FrontOffice/FrontOffice';
+// ----------------------
+
 import './App.css';
 
 const App = () => {
@@ -14,9 +25,20 @@ const App = () => {
             <Header/>
           </div>
           <div className='grid-item item2'>
-            <Overview/>
+            <Switch>
+              <Route  path='/Overview' exact component={Overview}/>
+              <Route  path='/GuestMgt' exact component={GuestMgt}/>
+              <Route  path='/BackOffice' exact component={BackOffice}/>
+              <Route  path='/POS' exact component={POS}/>
+              <Route  path='/Revenue' exact component={Revenue}/>
+              <Route  path='/RoomMgt' exact component={RoomMgt}/>
+              <Route  path='/FrontOffice' exact  component={FrontOffice}/>
+            </Switch>
+
           </div>
         </div>
+
+
         
       </Router>
   );
