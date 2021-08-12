@@ -1,0 +1,31 @@
+
+.BKcontainer{
+    height: 100%;
+    width: 100%;
+    background-color: var(--primaryColor);
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    grid-gap: 10px;
+  }
+  
+  
+  .BKitem1{
+    grid-column: 1/3;
+    grid-row: 1/3;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  .BKitem2{
+    grid-row: 3/11;
+    grid-column: 1/3;
+    /* background-color: #fff; */
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  

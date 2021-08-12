@@ -18,6 +18,10 @@ export default function CenteredTabs() {
     setValue(newValue);
   };
 
+  const handleonClick = () => {
+    
+  }
+
   return (
     <Paper className={classes.root}>
       <Tabs
