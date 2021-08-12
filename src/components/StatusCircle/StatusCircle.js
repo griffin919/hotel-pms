@@ -1,10 +1,8 @@
 import React from 'react'
-import '../App.css'
+import './StatusCircle.css'
 
 const StatusCircle = ({statusCounter, statusLabel}) => {
     return (
-        <div>
-            
             <div className="elipse-container">
                 <div>
                   <h2 className='itemLabel'>{statusLabel}</h2>
@@ -13,7 +11,6 @@ const StatusCircle = ({statusCounter, statusLabel}) => {
                     <h1>{statusCounter}</h1>
                 </div> 
             </div>
-        </div>
     )
 }
 
