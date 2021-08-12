@@ -1,5 +1,5 @@
 
-.FOcontainer{
+.GMcontainer{
     height: 100%;
     width: 100%;
     background-color: var(--primaryColor);
@@ -11,7 +11,7 @@
   }
   
   
-  .FOitem1{
+  .GMitem1{
     grid-column: 1/3;
     grid-row: 1/2;
     padding-left: 10vw;
@@ -21,7 +21,7 @@
     align-items: center;
   }
   
-  .FOitem2{
+  .GMitem2{
     grid-row: 2/11;
     grid-column: 1/3;
     /* background-color: #fff; */

@@ -1,9 +1,19 @@
 import React from 'react'
+import DataTable from '../../DataTable'
+import MenuTab from '../../MenuTab'
+import './GuestMgt.css'
 
 const GuestMgt = () => {
     return (
-        <div>
-            <h1>Guest Management</h1>
+        <div className="GMcontainer">
+               
+               <div className="grid-item GMitem1" >
+                    <MenuTab/>
+                 </div>
+
+            <div className="grid-item GMitem2">
+                <DataTable /> 
+            </div>
         </div>
     )
 }

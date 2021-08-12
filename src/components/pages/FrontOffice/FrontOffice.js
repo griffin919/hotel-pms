@@ -1,21 +1,18 @@
 import React from 'react'
 import './FrontOffice.css'
-import Header from '../../Header';
+import DataTable from '../../DataTable'
+import FOmenuTab from './FOmenuTab'
 
 const FrontOffice = () => {
     return (
         <div className="FOcontainer">
-           <div className="FOgrid-item item1">
-                
-          </div>
+            <div className="grid-item GMitem1" >
+                    <FOmenuTab/>
+                 </div>
 
-        <div className="FOgrid-item FOitem2" >
-         
-        </div>
-
-        <div className="FOgrid-item FOitem3">
-    
-        </div>
+            <div className="grid-item GMitem2">
+                <DataTable /> 
+            </div>
    
         </div>
     )

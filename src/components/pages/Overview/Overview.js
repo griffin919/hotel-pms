@@ -1,6 +1,6 @@
 import React from 'react'
 import StatusCircle from '../../StatusCircle/StatusCircle'
-import InHouseTable from '../../InHouseTable'
+import InHouseTable from '../../DataTable'
 import './Overview.css'
 
 const Overview = () => {
