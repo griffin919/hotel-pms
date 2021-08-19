@@ -1,7 +1,7 @@
 
 import React from 'react'
 
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import Header from './components/Header'
 
 //Page imports
@@ -32,16 +32,14 @@ const App = () => {
           </div>
           <div className='grid-item item2'>
             <Switch>
-              <Route  path='/Overview' exact component={Overview}/>
-              <Route  path='/GuestMgt' exact component={GuestMgt}/>
-              <Route  path='/BackOffice' exact component={BackOffice}/>
-              <Route  path='/POS' exact component={POS}/>
-              <Route  path='/Revenue' exact component={Revenue}/>
-              <Route  path='/RoomMgt' exact component={RoomMgt}/>
-              <Route  path='/FrontOffice' exact  component={FrontOffice}/>
-              <Route  path='/FrontOffice/Booking' exact  component={Bookings}/>
-              <Route  path='/FrontOffice/ManageBookings' exact  component={ManageBooking}/>
-              <Route  path='/FrontOffice/Resevation' exact  component={Reservations}/>
+              <Route  path='/overview' exact component={Overview}/>
+              <Route  path='/guestMgt' exact component={GuestMgt}/>
+              <Route  path='/backoffice' exact component={BackOffice}/>
+              <Route  path='/pos' exact component={POS}/>
+              <Route  path='/revenue' exact component={Revenue}/>
+              <Route  path='/roomMgt' exact component={RoomMgt}/>
+              <Route  path='/frontfffice/:page?' exact  component={props=> <FrontOffice {...props}/> }/>
+              <Redirect exact from='frontoffice' to='/frontoffice/booking' />
 
             </Switch>
 
