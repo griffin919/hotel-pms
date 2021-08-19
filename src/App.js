@@ -15,6 +15,12 @@ import RoomMgt from './components/pages/RoomMgt/RoomMgt';
 import FrontOffice from './components/pages/FrontOffice/FrontOffice';
 // ----------------------
 
+//FO page inports
+import Bookings from './Bookings/Booking'
+import ManageBooking from './ManageBookings/ManageBooking'
+import Reservations from './Reservation/Resevations'
+//---------------------
+
 import './App.css';
 
 const App = () => {
@@ -33,6 +39,10 @@ const App = () => {
               <Route  path='/Revenue' exact component={Revenue}/>
               <Route  path='/RoomMgt' exact component={RoomMgt}/>
               <Route  path='/FrontOffice' exact  component={FrontOffice}/>
+              <Route  path='/FrontOffice/Booking' exact  component={Bookings}/>
+              <Route  path='/FrontOffice/ManageBookings' exact  component={ManageBooking}/>
+              <Route  path='/FrontOffice/Resevation' exact  component={Reservations}/>
+
             </Switch>
 
           </div>

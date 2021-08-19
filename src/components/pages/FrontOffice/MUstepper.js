@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function getSteps() {
-  return ['Select campaign settings', 'Create an ad group', 'Create an ad'];
+  return ['Select campaign settings', 'Create an ad group'];
 }
 
 function getStepContent(step) {
@@ -29,8 +29,6 @@ function getStepContent(step) {
       return 'Select campaign settings...';
     case 1:
       return 'What is an ad group anyways?';
-    case 2:
-      return 'This is the bit I really care about!';
     default:
       return 'Unknown step';
   }
@@ -122,7 +120,7 @@ export default function HorizontalLinearStepper() {
               </Button>
               {isStepOptional(activeStep) && (
                 <Button
-                  variant="contained"
+                  // variant="contained"
                   color="primary"
                   onClick={handleSkip}
                   className={classes.button}
@@ -132,7 +130,7 @@ export default function HorizontalLinearStepper() {
               )}
 
               <Button
-                variant="contained"
+                // variant="contained"
                 color="primary"
                 onClick={handleNext}
                 className={classes.button}
