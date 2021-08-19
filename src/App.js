@@ -1,7 +1,7 @@
 
 import React from 'react'
 
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import Header from './components/Header'
 
 //Page imports
@@ -16,9 +16,9 @@ import FrontOffice from './components/pages/FrontOffice/FrontOffice';
 // ----------------------
 
 //FO page inports
-import Bookings from './Bookings/Booking'
-import ManageBooking from './ManageBookings/ManageBooking'
-import Reservations from './Reservation/Resevations'
+import Bookings from './components/pages/FrontOffice/Bookings/Booking'
+import ManageBooking from './components/pages/FrontOffice/ManageBookings/ManageBooking'
+import Reservations from './components/pages/FrontOffice/Reservation/Resevations'
 //---------------------
 
 import './App.css';
@@ -38,10 +38,8 @@ const App = () => {
               <Route  path='/POS' exact component={POS}/>
               <Route  path='/Revenue' exact component={Revenue}/>
               <Route  path='/RoomMgt' exact component={RoomMgt}/>
-              <Route  path='/FrontOffice' exact  component={FrontOffice}/>
-              <Route  path='/FrontOffice/Booking' exact  component={Bookings}/>
-              <Route  path='/FrontOffice/ManageBookings' exact  component={ManageBooking}/>
-              <Route  path='/FrontOffice/Resevation' exact  component={Reservations}/>
+              <Route  path='/FrontOffice/:page' exact render={props => <FrontOffice{...props}/>}/>
+              <Redirect exact from="/FrontOffice" to="/FrontOffice/Bookings" />
 
             </Switch>
 
