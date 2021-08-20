@@ -55,37 +55,37 @@ const TemporaryDrawer = (props) => {
     {
       text: 'Overview',
       icon: <LineStyleRoundedIcon />,
-      onClick: ()=> history.push('/Overview')
+      onClick: ()=> history.push('/overview')
     },
     {
       text: 'Front Office',
       icon: <DesktopWindowsRoundedIcon />,
-      onClick: ()=> history.push('/FrontOffice')
+      onClick: ()=> history.push('/frontoffice')
     },
     {
       text: 'Rooms',
       icon: <MeetingRoomRoundedIcon />,
-      onClick: ()=> history.push('/RoomMgt')
+      onClick: ()=> history.push('/roomrgt')
     },
     {
       text: 'Guests',
       icon: <PeopleAltRoundedIcon />,
-      onClick: ()=> history.push('/GuestMgt')
+      onClick: ()=> history.push('/guestmgt')
     },
     {
       text: 'POS',
       icon: <LocalPrintshopRoundedIcon />,
-      onClick: ()=> history.push('/POS')
+      onClick: ()=> history.push('/pos')
     },
     {
       text: 'Revenue',
       icon: <SettingsRoundedIcon />,
-      onClick: ()=> history.push('/Revenue')
+      onClick: ()=> history.push('/revenue')
     },
     {
       text: 'Back Office', 
       icon: <SettingsRoundedIcon />,
-      onClick: ()=> history.push('/BackOffice')
+      onClick: ()=> history.push('/backoffice')
     }
 
   ]

@@ -1,16 +1,8 @@
 
 import React from 'react';
-import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
-import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
-
-import Bookings from './Bookings/Booking'
-import ManageBooking from './ManageBookings/ManageBooking'
-import Reservations from './Reservation/Resevations'
 
 
 
@@ -22,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function SimpleTabs(props) {
-  const {match} = props;
+  const {match, history} = props;
   const {params} = match;
   const {page} = params;
    
@@ -46,6 +38,7 @@ export default function SimpleTabs(props) {
  
 
   const handleChange = (event, newValue) => {
+    // history.push(`/frontoffice/${tabNameToIndex[newValue]}`)
     setValue(newValue);
   };
 
@@ -57,10 +50,10 @@ export default function SimpleTabs(props) {
           <Tab label="MANAGE BOOKINGS" />
           <Tab label="RESERVATIONS" />
         </Tabs>
-
-        {value === 0 && <Bookings /> }
-        {value === 1 && <ManageBooking /> }
-        {value === 2 && <Reservations /> }
+{/* 
+        {value === 0 && <booking /> }
+        {value === 1 && <managebooking /> }
+        {value === 2 && <reservations /> } */}
     </div>
   );
 }
