@@ -1,32 +1,61 @@
-import React from 'react'
-import './FrontOffice.css'
-import DataTable from '../../DataTable'
-import FOmenuTab from './FOmenuTab'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Bookings from './Bookings/Booking'
-import ManageBooking from './ManageBookings/ManageBooking'
-import Reservations from './Reservation/Resevations'
 
-const FrontOffice = () => {
-    return (
-        <Router>
-            <div className="FOcontainer">
-                <div className="grid-item GMitem1" >
-                  <FOmenuTab/>
-                </div>
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
 
-                <div className="grid-item GMitem2">
-                <Switch>
-                    <Route  path='/Bookings' exact component={Bookings}/>
-                    <Route  path='/ManageBooking' exact component={ManageBooking}/>
-                    <Route  path='/Reservations' exact component={Reservations}/>
-                </Switch>
+import booking from './Bookings/Booking'
+import managebooking from './ManageBookings/ManageBooking'
+import reservations from './Reservation/Resevations'
 
-                </div>
-    
-            </div>
-        </Router>
-    )
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+    backgroundColor: theme.palette.background.paper,
+  },
+}));
+
+export default function SimpleTabs(props) {
+  const {match, history} = props;
+  const {params} = match;
+  const {page} = params;
+   
+  const tabNameToIndex={
+    0: "booking",
+    1: "managebooking",
+    2: "reservation"
+  }
+ 
+  const indexToTabName={
+   "booking": 0,
+   "managebooking": 1,
+   "reservation": 2
+ }
+ 
+
+
+  const classes = useStyles();
+  const [value, setValue] = React.useState(indexToTabName[page]);
+
+ 
+
+  const handleChange = (event, newValue) => {
+    history.push(`/frontoffice/${tabNameToIndex[newValue]}`)
+    setValue(newValue);
+  };
+
+  return (
+    <div className={classes.root}>
+{/*      
+        <Tabs value={value} onChange={handleChange} aria-label="simple tabs example" centered>
+          <Tab label="BOOKING"/>
+          <Tab label="MANAGE BOOKINGS" />
+          <Tab label="RESERVATIONS" />
+        </Tabs>
+
+        {value === 0 && <booking /> }
+        {value === 1 && <managebooking /> }
+        {value === 2 && <reservations /> } */}
+    </div>
+  );
 }
-
-export default FrontOffice

@@ -15,7 +15,23 @@ const useStyles = makeStyles((theme) => ({
 
 
 export default function SimpleTabs(props) {
+<<<<<<< HEAD
+  const {match} = props;
+  const {params} = match;
+  const {page} = params;
 
+  const tabNameToIndex = {
+    0: "booking",
+    1: "managebooking",
+    2 : "reservations",
+  }
+
+  const indexToTabName = {
+    "booking": 0,
+    "managebo": 1,
+    "reservation": 2,
+  }
+=======
   const {match, history} = props;
   const {params} = match;
   const {page} = params;
@@ -32,6 +48,8 @@ export default function SimpleTabs(props) {
    "reservation": 2
  }
  
+
+>>>>>>> 1268f20cd74e3e5de53cccc8fe1ced4522f030cc
 
   const classes = useStyles();
   const [value, setValue] = React.useState(indexToTabName[page]);

@@ -31,7 +31,16 @@ const App = () => {
           </div>
           <div className='grid-item item2'>
             <Switch>
-
+<<<<<<< HEAD
+              <Route  path='/Overview' exact component={Overview}/>
+              <Route  path='/GuestMgt' exact component={GuestMgt}/>
+              <Route  path='/BackOffice' exact component={BackOffice}/>
+              <Route  path='/POS' exact component={POS}/>
+              <Route  path='/Revenue' exact component={Revenue}/>
+              <Route  path='/RoomMgt' exact component={RoomMgt}/>
+              <Route  path='/FrontOffice/:page' exact render={props => <FrontOffice{...props}/>}/>
+              <Redirect exact from="/FrontOffice" to="/FrontOffice/Bookings" />
+=======
               <Route  path='/overview' exact component={overview}/>
               <Route  path='/guestMgt' exact component={guestmgt}/>
               <Route  path='/backoffice' exact component={backoffice}/>
@@ -40,6 +49,7 @@ const App = () => {
               <Route  path='/roommgt' exact component={roommgt}/>
               <Redirect exact from='/frontoffice' to='/frontoffice/booking' />
               <Route  path='/frontoffice/:page?' exact  component={props=> <frontoffice {...props}/> }/>
+>>>>>>> 1268f20cd74e3e5de53cccc8fe1ced4522f030cc
 
             </Switch>
 

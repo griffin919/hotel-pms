@@ -10,7 +10,7 @@ const Booking = () => {
                 </div>
 
                 <div className="grid-item BKitem2">
-               
+                  <h2>Booking Page</h2>
                 </div>
     
             </div>

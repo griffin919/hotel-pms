@@ -13,9 +13,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-
 export default function SimpleTabs(props) {
-
   const {match, history} = props;
   const {params} = match;
   const {page} = params;
@@ -32,6 +30,7 @@ export default function SimpleTabs(props) {
    "reservation": 2
  }
  
+
 
   const classes = useStyles();
   const [value, setValue] = React.useState(indexToTabName[page]);

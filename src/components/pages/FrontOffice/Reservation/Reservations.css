@@ -1,0 +1,12 @@
+
+.BKcontainer{
+    height: 100%;
+    width: 100%;
+    background-color: var(--primaryColor);
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    grid-gap: 10px;
+  }
+  
