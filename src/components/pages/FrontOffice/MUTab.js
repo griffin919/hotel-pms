@@ -1,9 +1,7 @@
 import React from 'react';
 import {Tab, Tabs, Paper, makeStyles} from '@material-ui/core';
 import { Link, Route, Switch } from 'react-router-dom';
-import Booking from './Bookings/Booking';
-import ManageBooking from './ManageBookings/ManageBooking';
-import Reservation from './Reservation/Reservations';
+
 
 const useStyles = makeStyles({
   root: {
@@ -37,11 +35,11 @@ const routes = ["/frontoffice/booking", "/frontoffice/managebooking", "/frontoff
           <Tab label="Reservation" value={routes[2]} component={Link} to={routes[0]}/>
         </Tabs>
 
-        <Switch>
+        {/* <Switch>
           <Route path='/frontoffice/booking' component={Booking}/>
           <Route path='/frontoffice/managebooking' component={ManageBooking}/>
           <Route path='/frontoffice/reservation' component={Reservation}/>
-        </Switch>
+        </Switch> */}
     </Paper>
   )
 }

@@ -1,6 +1,5 @@
 
 import React from 'react'
-
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import Header from './components/Header'
 
@@ -30,8 +29,8 @@ const App = () => {
             <Header/>
           </div>
           <div className='grid-item item2'>
+            <Bookings/>
             <Switch>
-
               <Route  path='/overview' exact component={Overview}/>
               <Route  path='/guestMgt' exact component={GuestMgt}/>
               <Route  path='/backoffice' exact component={BackOffice}/>
@@ -42,7 +41,6 @@ const App = () => {
               <Route  path='/frontoffice/:page' exact  component={props=> <FrontOffice {...props}/> }/> */}
               <Route  path='/frontoffice' exact component={FrontOffice}/>
             </Switch>
-
           </div>
         </div>
   );
